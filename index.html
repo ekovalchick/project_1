@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    
-    
+    <title>Document</title>
 </head>
 
-<body>
-    <div class="background-container">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">  
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="clouds"></div>
-        
-        
+ 
+ <!---index.html-->
+ <body>
+    <main>
     <header>
-        <h1>Cosmic Jamz</h1>
-        <p>Input your birthday to see what the comsos looked like when you were born! Enjoy these celestial spaces with a complimentary song. </p>
- <h2>Name:</h2>
-    <input id="name-input"  type="text">
-    <button class="search">Go!</button>
+    <h1>Nasa's Astronomical Picture of the Day</h1>
 
-    <h2>Birthday:</h2>
-        <input id="birthdate-input" type="text">
+    <form >
+    <label for="datepiceker">Pick a date:
+    <input id="datepicker" type="date" min="" max="" > 
+    </label>
+    </form>
 
-         <button class="search">Go!</button>
-
-
+    <hr style="color: white; width: 60vw;">
     </header>
-   
-    
-    <script src="./assets/js/script.js"></script>   
+
+    <section class="title-section">
+    <h2 id="title"></h2>
+    <p id="date"></p>
+    <small style="display: block;" id="copyright" ></small>
+    </section>
+
+    <section id="media-section">
+    </section>
+
+   <div class="description-div">
+    <p id="description"></p>
+   </div>
+    <script src="./assets/js/script.js"></script> 
+
 </body>
 </html>
 
