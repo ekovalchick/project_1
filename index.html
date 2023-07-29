@@ -26,43 +26,63 @@
         <h1>Cosmic Jamz</h1>
         <p>Enter your birth date below to learn how cosmos aligned on the day you were born!</p>
 
-        <form>
+        <!-- calendar only goes back as far as 1995. Can we change this? -->
+        <form id="user-info">
+            <label for="username">Your Name:
+                <input id="user-name" type="text" min="2" max="40">
+            </label>
+
             <label for="datepiceker">Your Birthday:
                 <input id="datepicker" type="date" min="" max="">
             </label>
         </form>
 
-
-
     </section>
 
-    <!-- page 2 will display the results of the user's input, NASA's picture of the day -->
-    <section id="birthday-photo">
+    <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
+    <main id="birthday-photo">
         <header>
             <h1><label for="" id="user-name">Nasa's</label> Cosmic Picture of the Day</h1>
-
-            <!-- <form>
-                <label for="datepiceker">Pick a date:
-                    <input id="datepicker" type="date" min="" max="">
-                </label>
-            </form> -->
-
             <hr style="color: white; width: 60vw;">
         </header>
+
+        <section class="title-section">
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <small style="display: block;" id="copyright"></small>
+        </section>
+
+        <section id="media-section">
+        </section>
+
+        <section>
+            <button id="favorite-button">Favorite</button>
+            <button id="share-button">Share</button>
+            <button id="back-button">Go Back</button>
+        </section>
+
+        <div class="description-div">
+            <p id="description"></p>
+        </div>
+    </main>
+
+    <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
+    <section id="favorite-section">
+        <h1><label for="" id="user-name">Nasa's</label> Favorite Cosmos</h1>
+
+        <section>
+
+            <button id="remove-button">Remove</button>
+        </section>
     </section>
 
-    <section class="title-section">
-        <h2 id="title"></h2>
-        <p id="date"></p>
-        <small style="display: block;" id="copyright"></small>
-    </section>
+    <!-- Any and all rights documentation will be contained here -->
+    <footer id="rights-container">
+        <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus facilis quaerat perspiciatis cum dolor,
+            nesciunt accusantium sapiente rem fugiat nobis ea. At quod vitae sunt molestias omnis? Id, magnam? Aperiam.
+        </h6>
+    </footer>
 
-    <section id="media-section">
-    </section>
-
-    <div class="description-div">
-        <p id="description"></p>
-    </div>
     <script src="./assets/js/script.js"></script>
 
 </body>
