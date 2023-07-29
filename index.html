@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cosmic Jam</title>
 </head>
 
- 
- <!---index.html-->
- <body>
-    <main>
-    <header>
-    <h1>Nasa's Astronomical Picture of the Day</h1>
 
-    <form >
-    <label for="datepiceker">Pick a date:
-    <input id="datepicker" type="date" min="" max="" > 
-    </label>
-    </form>
+<!---index.html-->
 
-    <hr style="color: white; width: 60vw;">
+<body>
+    <!-- navigation bar -->
+    <header id="navigation">
+        <nav>
+            <ul>
+                <li a href="#intro-section">Home</li>
+                <li>Favorites</li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- page 1: the welcome page to instruct users -->
+    <section id="intro-section">
+        <h1>Cosmic Jamz</h1>
+        <p>Enter your birth date below to learn how cosmos aligned on the day you were born!</p>
+
+        <form>
+            <label for="datepiceker">Your Birthday:
+                <input id="datepicker" type="date" min="" max="">
+            </label>
+        </form>
+
+
+
+    </section>
+
+    <!-- page 2 will display the results of the user's input, NASA's picture of the day -->
+    <section id="birthday-photo">
+        <header>
+            <h1><label for="" id="user-name">Nasa's</label> Cosmic Picture of the Day</h1>
+
+            <!-- <form>
+                <label for="datepiceker">Pick a date:
+                    <input id="datepicker" type="date" min="" max="">
+                </label>
+            </form> -->
+
+            <hr style="color: white; width: 60vw;">
+        </header>
+    </section>
+
     <section class="title-section">
-    <h2 id="title"></h2>
-    <p id="date"></p>
-    <small style="display: block;" id="copyright" ></small>
+        <h2 id="title"></h2>
+        <p id="date"></p>
+        <small style="display: block;" id="copyright"></small>
     </section>
 
     <section id="media-section">
     </section>
 
-   <div class="description-div">
-    <p id="description"></p>
-   </div>
-    <script src="./assets/js/script.js"></script> 
+    <div class="description-div">
+        <p id="description"></p>
+    </div>
+    <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>
