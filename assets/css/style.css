@@ -16,12 +16,19 @@ header {
     padding: 1rem;
 }
 
-/* this code isn't changing the style like I want. Will come back to it later. */
 nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style: none;
+}
+
+footer span {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 #intro-section,

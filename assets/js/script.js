@@ -1,3 +1,11 @@
+var introEl = document.querySelector("#intro-section");
+var navEl = document.querySelector("#navigation");
+var favoriteEl = document.querySelector("#favorite-section");
+var nasaEL = document.querySelector("#nasa-photo");
+
+// var userName = localStorage.getItem("name");
+// userName.textcontent = userName;
+
 function nasaRequested() {
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
     const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
@@ -61,12 +69,8 @@ function nasaRequested() {
     }
     fetchData();
 }
-
+// page elements are hidden upon fetching Nasa Photo of the Day.
 const dateInput = document.querySelector("#datepicker");
-var introEl = document.querySelector("#intro-section");
-var navEl = document.querySelector("#navigation");
-var favoriteEl = document.querySelector("#favorite-section");
-var nasaEL = document.querySelector("#nasa-photo");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
     nasaRequested();
@@ -75,16 +79,12 @@ dateInput.addEventListener('change', (e) => {
     nasaEL.removeAttribute("class");
 })
 
-nasaRequested()
+nasaRequested();
 
 /*
-when nasaRequested,
-intro-section hides,
-nav bar displays
+Name input pseudo code:
+
+User inputs name
+user's input replaces the username labels 
 
 */
-
-
-
-
-
