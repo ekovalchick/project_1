@@ -7,6 +7,12 @@ function nasarequested(){
    const mediaSection = document.querySelector("#media-section");
    const information = document.querySelector("#description");
 
+   window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const callback = (EmbedController) => {};
+    IFrameAPI.createController(element, options, callback);
+  };
+
    const currentDate =new Date().toISOString().slice(0, 10);
 
 
