@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 
 
 
 </head>
 
-        
-
-<header>
-    
 
 
-        <section id="first-page"  class="stars">
+<body>
+
+    <header>
+
+
+
+        <section id="first-page" class="stars">
             <h1>Cosmic Jamz</h1>
             <p>Input your birthday to see what the comsos looked like when you were born! Enjoy these celestial
                 spaces with a complimentary song. </p>
@@ -29,41 +31,39 @@
             <form>
                 <h2>Birthday:</h2>
                 <label for="datepicker">
-                    <input id="datepicker" type="date" min="" max="">
+                    <input id="datepicker" type="date" value="">
                 </label>
             </form>
 
 
-<h2>
-            <button id="go-btn">Go!</button>
-</h2>
-</header>
-
-<body>
-
-     
+            <h2>
+                <button id="go-btn">Go!</button>
+            </h2>
+    </header>
 
     <!---index.html main page-->
 
 
+    <section id="second-page" class="hide">
+        <!-- <h1>Nasa's Astronomical Picture of the Day</h1>
+         -->
+        <hr style="color: white; width: 60vw;">
 
-                <h1>Nasa's Astronomical Picture of the Day</h1>
+        <section id="title-section" class="hide">
+            <h2 id="title">Nasa's Astronomical Picture of the Day</h2>
+            <p id="date"></p>
+            <small style="display: block;" id="copyright"></small>
+        </section>
 
+        <section id="media-section">
+        </section>
 
-                <hr style="color: white; width: 60vw;">
+        <div class="description-div">
+            <p id="description"></p>
+        </div>
 
-                <section id="title-section" class="hide">
-                    <h2 id="title"></h2>
-                    <p id="date"></p>
-                    <small style="display: block;" id="copyright"></small>
-                </section>
+    </section>
 
-                <section id="media-section">
-                </section>
-
-                <div class="description-div">
-                    <p id="description"></p>
-                </div> 
     <script src="./assets/js/script.js"></script>
 
 </body>

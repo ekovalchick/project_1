@@ -1,33 +1,22 @@
 
-// var goBtn = document.getElementById("go-btn")
-// var firstPageEl=document.getElementById("first-page")
+ var goBtn = document.getElementById("go-btn")
+ var firstPageEl=document.getElementById("first-page")
 // // now in header
-// var titleSectionEl=document.getElementById("title-section")
+var titleSectionEl=document.getElementById("title-section")
+var secondPageEl=document.getElementById("second-page")
 // // now in body
 
 
 
-
-//  function goBtn(event) {
-//     console.log("load-picture");
-//    firstPageEl.classList.add("hide")
-//      firstPageEl.setAttribute("class", "hide")
-//     titleSectionEl.removeAttribute("class")
-  
+// console.log("Quiz-started");
+//     //  introSectionEl.classList.add("hide")
+//     introSectionEl.setAttribute("class", "hide")
+//     questionSectionEl.removeAttribute("class")
+//     setIntervalId = setInterval(countDown, 1000)
 //     showQuestions()
 // }
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -35,9 +24,17 @@
 
 
  function nasarequested(){
+
+// secondPageEl.setAttribute("hide")
+// secondPageEl/removeAttribute("class")
+
+
+
   const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
     const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
-    const dateInput = document.querySelector("#datepicker");
+
+     const dateInput = document.querySelector("#datepicker");
+
     const title = document.querySelector("#title");
     const copyright = document.querySelector("#copyright");
    const mediaSection = document.querySelector("#media-section");
@@ -106,4 +103,7 @@
 
     nasarequested()
 
-  
+
+
+
+  goBtn.addEventListener("click", nasarequested)
