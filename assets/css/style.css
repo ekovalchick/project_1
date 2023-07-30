@@ -1,6 +1,6 @@
 /* stylecss for first page */
 
-header{
+body{
     background:      linear-gradient(to left top, rgb(2, 2, 63), rgb(11, 150, 237)) ;
     background-attachment: fixed;
     text-align: center;
@@ -49,6 +49,7 @@ body {
 
 header {
     padding: 1rem;
+    text-align: center;
 } 
 
  main {
@@ -97,4 +98,11 @@ header {
 #description {
     line-height: 1.82;
 }
- 
+
+/* .section{
+    text-align: center;
+
+
+
+}
+  */
