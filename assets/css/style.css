@@ -25,8 +25,9 @@ nav ul {
 }
 
 #intro-section,
-#birthday-photo,
-#favorite-section {
+#nasa-photo,
+#favorite-section,
+#rights-container {
     margin: auto;
     text-align: center;
 }

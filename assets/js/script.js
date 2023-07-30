@@ -63,13 +63,16 @@ function nasaRequested() {
 }
 
 const dateInput = document.querySelector("#datepicker");
-var introEl=document.querySelector("#intro-section");
-var navEl=document.querySelector("#navigation");
+var introEl = document.querySelector("#intro-section");
+var navEl = document.querySelector("#navigation");
+var favoriteEl = document.querySelector("#favorite-section");
+var nasaEL = document.querySelector("#nasa-photo");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
     nasaRequested();
     introEl.classList.add("hide");
     navEl.removeAttribute("class");
+    nasaEL.removeAttribute("class");
 })
 
 nasaRequested()
