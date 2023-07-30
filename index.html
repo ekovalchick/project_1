@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cosmic Jam</title>
 </head>
 
@@ -12,11 +13,11 @@
 
 <body>
     <!-- navigation bar -->
-    <header id="navigation">
-        <nav>
+    <header>
+        <nav id="navigation" class="hide">
             <ul>
-                <li a href="#intro-section">Home</li>
-                <li>Favorites</li>
+                <li><a href="#intro-section">Home</a></li>
+                <li><a href="#favorite-section">Favorites</a></li>
             </ul>
         </nav>
     </header>
@@ -24,15 +25,15 @@
     <!-- page 1: the welcome page to instruct users -->
     <section id="intro-section">
         <h1>Cosmic Jamz</h1>
-        <p>Enter your birth date below to learn how cosmos aligned on the day you were born!</p>
+        <p>Enter a date below to learn how cosmos aligned!</p>
 
         <!-- calendar only goes back as far as 1995. Can we change this? -->
         <form id="user-info">
             <label for="username">Your Name:
-                <input id="user-name" type="text" min="2" max="40">
+                <input id="user-name" type="text" min="" max="">
             </label>
 
-            <label for="datepiceker">Your Birthday:
+            <label for="datepiceker">Pick a Date:
                 <input id="datepicker" type="date" min="" max="">
             </label>
         </form>
