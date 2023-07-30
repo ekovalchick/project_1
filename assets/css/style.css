@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* stylecss for first page */
 
 body{
@@ -34,6 +35,10 @@ body{
 /* /* 
 /*style.css main page*/
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+=======
+/*style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -42,25 +47,61 @@ body{
 
 body {
     margin: 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
     background-color: var(--primary-color);
     color: white;
 }
 
 header {
     padding: 1rem;
+<<<<<<< HEAD
     text-align: center;
 } 
 
  main {
+=======
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#intro-section,
+#nasa-photo,
+#favorite-section,
+#rights-container {
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
     margin: auto;
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+a:hover {
+    color: white;
+}
+
+
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
 .title-section {
     padding: 1rem;
 }
 
+<<<<<<< HEAD
 #datepicker {
     box-sizing: border-box;
     width: 9rem;
@@ -77,16 +118,21 @@ header {
     width: 100%;
 } 
 
+=======
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
 .video-div {
     width: 80%;
     margin: auto;
 }
 
+<<<<<<< HEAD
 #videoLink {
     width: 100%;
     height: 70vh
 }
 
+=======
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
 .description-div {
     width: 80%;
     margin: 0.1rem auto 1rem;
@@ -95,6 +141,7 @@ header {
     border-radius: 00.5rem;
 }
 
+<<<<<<< HEAD
 #description {
     line-height: 1.82;
 }
@@ -106,3 +153,34 @@ header {
 
 }
   */
+=======
+/* class to hide pages and navigation bar */
+.hide {
+    display: none;
+}
+
+.image-div {
+    width: 80%;
+    margin: auto;
+}
+
+#datepicker {
+    box-sizing: border-box;
+    width: 9rem;
+    padding: 00.2rem;
+    border-radius: 0.5rem;
+}
+
+#image_of_the_day {
+    width: 100%;
+}
+
+#videoLink {
+    width: 100%;
+    height: 70vh
+}
+
+#description {
+    line-height: 1.82;
+}
+>>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
