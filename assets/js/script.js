@@ -7,7 +7,15 @@ var navFave = document.querySelector("#favorite");
 
 
 
-
+function showInfo() {
+    const infoElement = event.target.querySelector('.info');
+    infoElement.style.transform = 'translateY(0)';
+  }
+  
+  function hideInfo() {
+    const infoElement = event.target.querySelector('.info');
+    infoElement.style.transform = 'translateY(100%)';
+  }
 
 
 // navigation link functions
