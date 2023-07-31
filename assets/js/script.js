@@ -6,10 +6,15 @@ function nasarequested(){
    const copyright = document.querySelector("#copyright");
    const mediaSection = document.querySelector("#media-section");
    const information = document.querySelector("#description");
+   const play = document.querySelector("#play");
 
    window.onSpotifyIframeApiReady = (IFrameAPI) => {
     const element = document.getElementById('embed-iframe');
-    const callback = (EmbedController) => {};
+    const options = {
+        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
+    };
+    const callback = (EmbedController) => {
+    };
     IFrameAPI.createController(element, options, callback);
   };
 
