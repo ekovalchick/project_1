@@ -135,54 +135,54 @@ function nasaRequested() {
     information.innerHTML = data.explanation
  }
  fetchData();
+// }
+
+ const dateInput = document.querySelector("#datepicker");
+ dateInput.addEventListener('change', (e) => {
+    e.preventDefault();
+    nasarequested();
+})
+// =======
+function fetchData() {
+    try {
+        fetch(baseUrl + apiKey + newDate)
+            .then(response => response.json())
+            .then(json => {
+                console.log(json);
+                displayData(json)
+            })
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-// const dateInput = document.querySelector("#datepicker");
-// dateInput.addEventListener('change', (e) => {
-//     e.preventDefault();
-//     nasarequested();
-// })
-// // =======
-// function fetchData() {
-//     try {
-//         fetch(baseUrl + apiKey + newDate)
-//             .then(response => response.json())
-//             .then(json => {
-//                 console.log(json);
-//                 displayData(json)
-//             })
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+function displayData(data) {
 
-// function displayData(data) {
+    title.innerHTML = data.title;
 
-//     title.innerHTML = data.title;
+    if (data.hasOwnProperty("copyright")) {
+        copyright.innerHTML = data.copyright;
+    } else {
+        copyright.innerHTML = ""
+    }
 
-//     if (data.hasOwnProperty("copyright")) {
-//         copyright.innerHTML = data.copyright;
-//     } else {
-//         copyright.innerHTML = ""
-//     }
+    date.innerHTML = data.date;
+    dateInput.max = currentDate;
+    dateInput.min = "1995-06-16";
 
-//     date.innerHTML = data.date;
-//     dateInput.max = currentDate;
-//     dateInput.min = "1995-06-16";
+    if (data.media_type == "video") {
+        mediaSection.innerHTML = videoSection;
+        document.getElementById("videoLink").src = data.url;
 
-//     if (data.media_type == "video") {
-//         mediaSection.innerHTML = videoSection;
-//         document.getElementById("videoLink").src = data.url;
-
-//     } else {
-//         mediaSection.innerHTML = imageSection;
-//         document.getElementById("hdimg").href = data.hdurl;
-//         document.getElementById("image_of_the_day").src = data.url;
-//     }
-//     information.innerHTML = data.explanation
-// }
+    } else {
+        mediaSection.innerHTML = imageSection;
+        document.getElementById("hdimg").href = data.hdurl;
+        document.getElementById("image_of_the_day").src = data.url;
+    }
+    information.innerHTML = data.explanation
+}
 fetchData();
- }
+//  }
 // Function to check if the footer should be visible or not
 function footerVisibility() {
     var footer = document.getElementById('rights-container');
@@ -216,7 +216,7 @@ dateInput.addEventListener('change', (e) => {
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
-f030095f4508904f24d3667c0f95206bcb0ee8a4
+
 
 
 nasaRequested();
