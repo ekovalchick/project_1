@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
- var goBtn = document.getElementById("go-btn")
- var firstPageEl=document.getElementById("first-page")
-// // now in header
-var titleSectionEl=document.getElementById("title-section")
-var secondPageEl=document.getElementById("second-page")
-// // now in body
+//  var goBtn = document.getElementById("go-btn")
+//  var firstPageEl=document.getElementById("first-page")
+// // // now in header
+// var titleSectionEl=document.getElementById("title-section")
+// var secondPageEl=document.getElementById("second-page")
+// // // now in body
 
 
 
@@ -17,30 +17,30 @@ var secondPageEl=document.getElementById("second-page")
 //     showQuestions()
 // }
 
- 
+
 
 
 
 // java for second page\
 
 
- function nasarequested(){
+//  function nasarequested(){
 
 // secondPageEl.setAttribute("hide")
 // secondPageEl/removeAttribute("class")
 
 
 
-  const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
-    const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
+// const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
+// const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
 
-     const dateInput = document.querySelector("#datepicker");
+// const dateInput = document.querySelector("#datepicker");
 
-    const title = document.querySelector("#title");
-    const copyright = document.querySelector("#copyright");
-   const mediaSection = document.querySelector("#media-section");
-   const information = document.querySelector("#description");
-=======
+// const title = document.querySelector("#title");
+// const copyright = document.querySelector("#copyright");
+// const mediaSection = document.querySelector("#media-section");
+// const information = document.querySelector("#description");
+// =======
 var introEl = document.querySelector("#intro-section");
 var navEl = document.querySelector("#navigation");
 var favoriteEl = document.querySelector("#favorite-section");
@@ -76,118 +76,113 @@ function nasaRequested() {
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
->>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
+    f030095f4508904f24d3667c0f95206bcb0ee8a4
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
 
-<<<<<<< HEAD
-   const imageSection =`<a id="hdimg" href="" target="-blank">
-     <div class="image-div">
-     <img id="image_of_the_day" src="" alt="image-by-nasa">
-     </div>
-    </a>`
-=======
     const imageSection = `<a id="hdimg" href="" target="-blank">
     <div class="image-div">
     <img id="image_of_the_day" src="" alt="image-by-nasa">
     </div>
    </a>`
->>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
 
     const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
 
     let newDate = "&date=" + dateInput.value + "&";
 
 
-<<<<<<< HEAD
-    function fetchData(){
-     try{
-     fetch(baseUrl+apiKey+newDate)
-     .then(response=> response.json())
-     .then(json=>{
-     console.log(json);
-     diplaydata(json)
-     })
-     }catch(error){
-     console.log(error)
-     }
-     }
-
-    function diplaydata(data){
-
-     title.innerHTML=data.title;
-
-     if(data.hasOwnProperty("copyright")){
-     copyright.innerHTML=data.copyright;
-    } else{
-     copyright.innerHTML=""
-     } 
-
-     date.innerHTML=data.date;
-     dateInput.max=currentDate;
-     dateInput.min="1995-06-16";
-
-     if(data.media_type=="video"){
-     mediaSection.innerHTML=videoSection;
-     document.getElementById("videoLink").src=data.url;
-
-     }else{
-     mediaSection.innerHTML=imageSection;
-     document.getElementById("hdimg").href=data.hdurl;
-     document.getElementById("image_of_the_day").src=data.url;
-     }
-     information.innerHTML=data.explanation
-    }
-    fetchData();
- }
-
- const dateInput = document.querySelector("#datepicker");
-     dateInput.addEventListener('change',(e)=>{
-      e.preventDefault();
-      nasarequested();
-     })
-=======
+    //  HEAD
     function fetchData() {
         try {
             fetch(baseUrl + apiKey + newDate)
                 .then(response => response.json())
                 .then(json => {
                     console.log(json);
-                    displayData(json)
+                    diplaydata(json)
                 })
         } catch (error) {
             console.log(error)
         }
     }
 
-    function displayData(data) {
+    function diplaydata(data) {
 
         title.innerHTML = data.title;
 
         if (data.hasOwnProperty("copyright")) {
             copyright.innerHTML = data.copyright;
-        } else {
+        }
+        else {
             copyright.innerHTML = ""
         }
-
-        date.innerHTML = data.date;
-        dateInput.max = currentDate;
-        dateInput.min = "1995-06-16";
-
-        if (data.media_type == "video") {
-            mediaSection.innerHTML = videoSection;
-            document.getElementById("videoLink").src = data.url;
-
-        } else {
-            mediaSection.innerHTML = imageSection;
-            document.getElementById("hdimg").href = data.hdurl;
-            document.getElementById("image_of_the_day").src = data.url;
-        }
-        information.innerHTML = data.explanation
     }
-    fetchData();
+
+    date.innerHTML = data.date;
+    dateInput.max = currentDate;
+    dateInput.min = "1995-06-16";
+
+    if (data.media_type == "video") {
+        mediaSection.innerHTML = videoSection;
+        document.getElementById("videoLink").src = data.url;
+
+    } 
+    else {
+        mediaSection.innerHTML = imageSection;
+        document.getElementById("hdimg").href = data.hdurl;
+        document.getElementById("image_of_the_day").src = data.url;
+    }
+    information.innerHTML = data.explanation
+ }
+ fetchData();
 }
+
+// const dateInput = document.querySelector("#datepicker");
+// dateInput.addEventListener('change', (e) => {
+//     e.preventDefault();
+//     nasarequested();
+// })
+// // =======
+// function fetchData() {
+//     try {
+//         fetch(baseUrl + apiKey + newDate)
+//             .then(response => response.json())
+//             .then(json => {
+//                 console.log(json);
+//                 displayData(json)
+//             })
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+// function displayData(data) {
+
+//     title.innerHTML = data.title;
+
+//     if (data.hasOwnProperty("copyright")) {
+//         copyright.innerHTML = data.copyright;
+//     } else {
+//         copyright.innerHTML = ""
+//     }
+
+//     date.innerHTML = data.date;
+//     dateInput.max = currentDate;
+//     dateInput.min = "1995-06-16";
+
+//     if (data.media_type == "video") {
+//         mediaSection.innerHTML = videoSection;
+//         document.getElementById("videoLink").src = data.url;
+
+//     } else {
+//         mediaSection.innerHTML = imageSection;
+//         document.getElementById("hdimg").href = data.hdurl;
+//         document.getElementById("image_of_the_day").src = data.url;
+//     }
+//     information.innerHTML = data.explanation
+// }
+fetchData();
+ }
 // Function to check if the footer should be visible or not
 function footerVisibility() {
     var footer = document.getElementById('rights-container');
@@ -221,15 +216,8 @@ dateInput.addEventListener('change', (e) => {
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
->>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
+f030095f4508904f24d3667c0f95206bcb0ee8a4
 
 
-<<<<<<< HEAD
-
-
-
-  goBtn.addEventListener("click", nasarequested)
-=======
 nasaRequested();
 
->>>>>>> f030095f4508904f24d3667c0f95206bcb0ee8a4
