@@ -1,33 +1,3 @@
-// <<<<<<< HEAD
-
-//  var goBtn = document.getElementById("go-btn")
-//  var firstPageEl=document.getElementById("first-page")
-// // // now in header
-// var titleSectionEl=document.getElementById("title-section")
-// var secondPageEl=document.getElementById("second-page")
-// // // now in body
-
-
-
-// console.log("Quiz-started");
-//     //  introSectionEl.classList.add("hide")
-//     introSectionEl.setAttribute("class", "hide")
-//     questionSectionEl.removeAttribute("class")
-//     setIntervalId = setInterval(countDown, 1000)
-//     showQuestions()
-// }
-
-
-
-
-
-// java for second page\
-
-
-//  function nasarequested(){
-
-// secondPageEl.setAttribute("hide")
-// secondPageEl/removeAttribute("class")
 
 
 
@@ -76,7 +46,7 @@ function nasaRequested() {
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
-    f030095f4508904f24d3667c0f95206bcb0ee8a4
+    // f030095f4508904f24d3667c0f95206bcb0ee8a4
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
