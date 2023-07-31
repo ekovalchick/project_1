@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Cosmic Jam</title>
 </head>
 
- 
- <!---index.html-->
- <body>
-    <main>
+
+<!---index.html-->
+
+<body>
+    <!-- navigation bar -->
     <header>
-    <h1>Nasa's Astronomical Picture of the Day</h1>
-
-    <form >
-    <label for="datepiceker">Pick a date:
-    <input id="datepicker" type="date" min="" max="" > 
-    </label>
-    </form>
-
-    <hr style="color: white; width: 60vw;">
+        <nav id="navigation" class="hide">
+            <ul>
+                <li id="home"><a href="#intro-section">Home</a></li>
+                <li id="favorite"><a href="#favorite-section">Favorites</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="title-section">
-    <h2 id="title"></h2>
-    <p id="date"></p>
-    <small style="display: block;" id="copyright" ></small>
+    <!-- page 1: the welcome page to instruct users -->
+    <section id="intro-section">
+        <h1>Cosmic Jamz</h1>
+        <p>Enter a date below to learn how cosmos aligned!</p>
+
+        <!-- calendar only goes back as far as 1995. Can we change this? -->
+        <form id="user-info">
+            <label for="username">Your Name:
+                <input id="user-name" type="text" min="" max="">
+            </label>
+
+            <label for="datepiceker">Pick a Date:
+                <input id="datepicker" type="date" min="" max="">
+            </label>
+        </form>
+
     </section>
 
-    <section id="media-section">
-    </section>
+    <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
+    <main id="nasa-photo" class="hide">
+        <header>
+            <h1><label for="" id="user-name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <hr style="color: white; width: 60vw;">
+        </header>
 
-    <div class="share-section">
-        <iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=medium"
-        style="width:130px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2F&layout=button_count&size=small&mobile_iframe=true&appId" width="130" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
+        <section class="title-section">
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <small style="display: block;" id="copyright"></small>
+        </section>
+
+        <section id="media-section"></section>
+
+        <section>
+            <button id="favorite-button">Favorite</button>
+            <button id="share-button">Share</button>
+            <button id="back-button">Go Back</button>
+        </section>
 
    <div class="description-div">
     <p id="description"></p>
    </div>
-
-   <div class="music-section">
-        <iframe style="border-radius:10px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1qNZsqIInBz?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-
     <script src="./assets/js/script.js"></script> 
 
 </body>
+
 </html>
