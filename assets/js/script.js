@@ -4,9 +4,24 @@ var favoriteEl = document.querySelector("#favorite-section");
 var nasaEL = document.querySelector("#nasa-photo");
 var navHome = document.querySelector("#home");
 var navFave = document.querySelector("#favorite");
+var userName = document.querySelector("#user-name");
 
+var nameInput =[];
 
+function getName() {
+    
+}
 
+// Spotify API
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
+    };
+    const callback = (EmbedController) => {
+    };
+    IFrameAPI.createController(element, options, callback);
+  };
 
 
 
@@ -132,6 +147,7 @@ navFave.addEventListener("click", goFave);
 window.addEventListener('scroll', footerVisibility);
 window.addEventListener('resize', footerVisibility);
 window.addEventListener('popstate', footerVisibility);
+// date picker event listener
 const dateInput = document.querySelector("#datepicker");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
@@ -141,7 +157,3 @@ dateInput.addEventListener('change', (e) => {
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
-
-
-nasaRequested();
-
