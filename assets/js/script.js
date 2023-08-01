@@ -4,6 +4,7 @@ var favoriteEl = document.querySelector("#favorite-section");
 var nasaEL = document.querySelector("#nasa-photo");
 var navHome = document.querySelector("#home");
 var navFave = document.querySelector("#favorite");
+<<<<<<< HEAD
 var backBtn = document.getElementById("back-button");
 var favBtn = document.getElementById("favorite-button");
 
@@ -14,8 +15,26 @@ const msg = encodeURIComponent('Hey, I found this article');
 const title = encodeURIComponent(document.querySelector('title').textContent);
 console.log([link,msg,title])
 // share button
+=======
+var userName = document.querySelector("#user-name");
 
+var nameInput =[];
+>>>>>>> 7f6ebbf76f1219b068286e3e4608d2f901ba8d6f
 
+function getName() {
+    
+}
+
+// Spotify API
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
+    };
+    const callback = (EmbedController) => {
+    };
+    IFrameAPI.createController(element, options, callback);
+  };
 
 
 
@@ -36,12 +55,32 @@ function goFave() {
 // nasa photo function
 function nasaRequested() {
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
+<<<<<<< HEAD
+   const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
+   const dateInput = document.querySelector("#datepicker");
+   const title = document.querySelector("#title");
+   const copyright = document.querySelector("#copyright");
+   const mediaSection = document.querySelector("#media-section");
+   const information = document.querySelector("#description");
+   const play = document.querySelector("#play");
+
+   window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
+    };
+    const callback = (EmbedController) => {
+    };
+    IFrameAPI.createController(element, options, callback);
+  };
+=======
     const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
     const dateInput = document.querySelector("#datepicker");
     const title = document.querySelector("#title");
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
+>>>>>>> develop
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
@@ -121,6 +160,7 @@ navFave.addEventListener("click", goFave);
 window.addEventListener('scroll', footerVisibility);
 window.addEventListener('resize', footerVisibility);
 window.addEventListener('popstate', footerVisibility);
+// date picker event listener
 const dateInput = document.querySelector("#datepicker");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
@@ -130,6 +170,7 @@ dateInput.addEventListener('change', (e) => {
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
+<<<<<<< HEAD
 
 
 nasaRequested();
@@ -212,3 +253,5 @@ function saveFavPhoto(){
 // }
 
 favBtn.addEventListener("click", saveFavPhoto);
+=======
+>>>>>>> 7f6ebbf76f1219b068286e3e4608d2f901ba8d6f
