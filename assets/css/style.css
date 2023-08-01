@@ -1,6 +1,5 @@
 /*style.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-<<<<<<< HEAD
 
     :root{
      font-family: 'Montserrat', sans-serif;
@@ -54,8 +53,6 @@
     }
 
 
-=======
->>>>>>> 68512ff4e153702c041729cc14919f0c6cbddff7
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -127,45 +124,6 @@ a:hover {
     margin: auto;
 }
 
-/* share button */
-
-#share-container span {
-    display: block;
-    margin: 3rem auto;
-    font-size: 50px;
-    padding: 1rem;
-    margin: 1rem;
-  }
-  #share-buttons i {
-    font-size: 100px;
-    margin: 20px;
-  }
-  .facebook {
-        color: #3b5998;
-  }
-  .twitter {
-      color: #55acee;
-  }
-  .linkedin {
-      color: #0077b5;
-  }
-  .reddit {
-      color: #cb2027;
-  }
-  .whatsapp {
-      color: #25D366;
-  }
-  .telegram {
-      color: #229ED9;
-  }
-  .facebook, .twitter, .linkedin, .reddit, .whatsapp, .telegram {
-    opacity: 0.6;
-  }
-  .facebook:hover, .twitter:hover, .linkedin:hover, .reddit:hover, .whatsapp:hover, .telegram:hover {
-    opacity: 0.9;
-  }
-
-  /* ^end of share button */
 
 #datepicker {
     box-sizing: border-box;
@@ -186,7 +144,3 @@ a:hover {
 #description {
     line-height: 1.82;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 68512ff4e153702c041729cc14919f0c6cbddff7
