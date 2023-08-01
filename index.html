@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- css framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Cosmic Jamz</title>
 </head>
 
@@ -85,10 +86,16 @@
     <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
     <section id="favorite-section" class="hide">
         <h1><label for="" id="name">Nasa</label>'s Favorite Cosmos</h1>
-
-        <section>
-
-            <button id="remove-button">Remove</button>
+<!-- Isabella's code for favorites saved -->
+        <section class="fave-container">
+            <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
+                <img src="#nasa-photo" alt="Image">
+                <section class="info">
+                    <h2>Card Title</h2>
+                    <p>Dynamic information goes here...</p>
+                </section>
+                <button id="remove-button">Remove</button>
+            </section>
         </section>
     </section>
 
