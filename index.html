@@ -1,40 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- share button font info -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Cosmic Jam</title>
 </head>
 
- 
- <!---index.html-->
- <body>
-    <main>
+
+<!---index.html-->
+
+<body>
+    <!-- navigation bar -->
     <header>
-    <h1>Nasa's Astronomical Picture of the Day</h1>
-
-    <form >
-    <label for="datepicker">Pick a date:
-    <input id="datepicker" type="date" min="" max="" > 
-    </label>
-    </form>
-
-    <hr style="color: white; width: 60vw;">
+        <nav id="navigation" class="hide">
+            <ul>
+                <li id="home"><a href="#intro-section">Home</a></li>
+                <li id="favorite"><a href="#favorite-section">Favorites</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="title-section">
-    <h2 id="title"></h2>
-    <p id="date"></p>
-    <small style="display: block;" id="copyright" ></small>
+    <!-- page 1: the welcome page to instruct users -->
+    <section id="intro-section">
+        <h1>Cosmic Jamz</h1>
+        <p>Enter a date below to learn how cosmos aligned!</p>
+
+        <!-- calendar only goes back as far as 1995. Can we change this? -->
+        <form id="user-info">
+            <label for="username">Your Name:
+                <input id="user-name" type="text" min="" max="">
+            </label>
+
+            <label for="datepiceker">Pick a Date:
+                <input id="datepicker" type="date" min="" max="">
+            </label>
+        </form>
+
     </section>
 
-    <section id="media-section">
+    <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
+    <main id="nasa-photo" class="hide">
+        <header>
+            <h1><label for="" id="user-name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <hr style="color: white; width: 60vw;">
+        </header>
+
+        <section class="title-section">
+            <h2 id="title"></h2>
+            <p id="date"></p>
+            <small style="display: block;" id="copyright"></small>
+        </section>
+
+        <section id="media-section"></section>
+
+        <section>
+            <button id="favorite-button">Favorite</button>
+            <button id="share-button">Share</button>
+            <button id="back-button">Go Back</button>
+        </section>
+
+        <div class="description-div">
+            <p id="description"></p>
+        </div>
+
+
+        <section id="music-player">
+
+        </section>
+<!-- share button below -->
+        <div id="share-buttons">
+
+            <!-- facebook -->
+            <a class="facebook" target="blank"><i class="fab fa-facebook"></i></a>
+            
+            <!-- twitter -->
+            <a class="twitter" target="blank"><i class="fab fa-twitter"></i></a>
+            
+            <!-- linkedin -->
+            <a class="linkedin" target="blank"><i class="fab fa-linkedin"></i></a>
+            
+            <!-- reddit -->
+            <a class="reddit" target="blank"><i class="fab fa-reddit"></i></a>
+          
+            <!-- whatsapp-->
+            <a class="whatsapp" target="blank"><i class="fab fa-whatsapp"></i></a>
+          
+            <!-- telegram-->
+            <a class="telegram" target="blank"><i class="fab fa-telegram"></i></a>
+          
+          </div>
+    </main>
+
+    <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
+    <section id="favorite-section" class="hide">
+        <h1><label for="" id="user-name">Nasa</label>'s Favorite Cosmos</h1>
+
+        <section>
+
+            <button id="remove-button">Remove</button>
+        </section>
     </section>
 
-   <div class="description-div">
-    <p id="description"></p>
-   </div>
-    <script src="./assets/js/script.js"></script> 
+    <!-- All rights documentation will be contained here -->
+    <footer id="rights-container">
+        <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus facilis quaerat perspiciatis cum dolo
+            nesciunt accusantium sapiente rem fugiat nobis ea. At quod vitae sunt molestias omnis? Id, magnam?Aperiam.
+
+        </h6>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>
