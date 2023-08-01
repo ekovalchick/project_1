@@ -142,7 +142,7 @@ const dateInput = document.querySelector("#datepicker");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
     nasaRequested();
-
+    
     // page elements are hidden upon fetching Nasa Photo of the Day.
     introEl.classList.add("hide");
     navEl.removeAttribute("class");
