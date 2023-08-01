@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- share button font info -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cosmic Jamz</title>
 </head>
@@ -45,7 +43,7 @@
     <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
     <main id="nasa-photo" class="hide">
         <header>
-            <h1><label for="" id="name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <h1><label for="" id="user-name">Nasa</label>'s Cosmic Picture of the Day</h1>
             <hr style="color: white; width: 60vw;">
         </header>
 
@@ -67,6 +65,7 @@
             <iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=medium"
                 style="width:130px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
             <button id="favorite-button">Favorite</button>
+            <button id="share-button">Share</button>
             <button id="back-button">Go Back</button>
         </section>
 
@@ -82,28 +81,7 @@
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </section>
-<!-- share button below -->
-        <div id="share-buttons">
 
-            <!-- facebook -->
-            <a class="facebook" target="blank"><i class="fab fa-facebook"></i></a>
-            
-            <!-- twitter -->
-            <a class="twitter" target="blank"><i class="fab fa-twitter"></i></a>
-            
-            <!-- linkedin -->
-            <a class="linkedin" target="blank"><i class="fab fa-linkedin"></i></a>
-            
-            <!-- reddit -->
-            <a class="reddit" target="blank"><i class="fab fa-reddit"></i></a>
-          
-            <!-- whatsapp-->
-            <a class="whatsapp" target="blank"><i class="fab fa-whatsapp"></i></a>
-          
-            <!-- telegram-->
-            <a class="telegram" target="blank"><i class="fab fa-telegram"></i></a>
-          
-          </div>
     </main>
 
     <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
