@@ -5,12 +5,9 @@ var nasaEL = document.querySelector("#nasa-photo");
 var navHome = document.querySelector("#home");
 var navFave = document.querySelector("#favorite");
 var userName = document.querySelector("#user-name");
+var favoriteBtn = document.querySelector("#favorite-button");
 
-var nameInput =[];
-
-function getName() {
-    
-}
+var users = [];
 
 // Spotify API
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
@@ -21,9 +18,7 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
     const callback = (EmbedController) => {
     };
     IFrameAPI.createController(element, options, callback);
-  };
-
-
+};
 
 // navigation link functions
 function goHome() {
@@ -42,32 +37,12 @@ function goFave() {
 // nasa photo function
 function nasaRequested() {
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
-<<<<<<< HEAD
-   const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
-   const dateInput = document.querySelector("#datepicker");
-   const title = document.querySelector("#title");
-   const copyright = document.querySelector("#copyright");
-   const mediaSection = document.querySelector("#media-section");
-   const information = document.querySelector("#description");
-   const play = document.querySelector("#play");
-
-   window.onSpotifyIframeApiReady = (IFrameAPI) => {
-    const element = document.getElementById('embed-iframe');
-    const options = {
-        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
-    };
-    const callback = (EmbedController) => {
-    };
-    IFrameAPI.createController(element, options, callback);
-  };
-=======
     const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
     const dateInput = document.querySelector("#datepicker");
     const title = document.querySelector("#title");
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
->>>>>>> develop
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
@@ -89,6 +64,7 @@ function nasaRequested() {
                 .then(response => response.json())
                 .then(json => {
                     console.log(json);
+                    localStorage.setItem("json", JSON.stringify(json))
                     displayData(json)
                 })
         } catch (error) {
@@ -138,6 +114,20 @@ function footerVisibility() {
         footer.style.display = 'none';
     }
 }
+// Function to save NASA photos to Favorites
+function saveFavorite() {
+    var json=JSON.parse(localStorage.getItem("json"));
+    if (localStorage.getItem(users)) {
+        users=JSON.parse(localStorage.getItem("users"))
+    }
+    users.push({
+        user: userName.value,
+        date: json.date, 
+        url: json.url,
+        description: json.explanation
+    })
+    localStorage.setItem("users", JSON.stringify(users));
+}
 
 
 // Event Listener for navigation links
@@ -152,8 +142,10 @@ const dateInput = document.querySelector("#datepicker");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
     nasaRequested();
+
     // page elements are hidden upon fetching Nasa Photo of the Day.
     introEl.classList.add("hide");
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
+favoriteBtn.addEventListener("click", saveFavorite)
