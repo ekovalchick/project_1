@@ -5,7 +5,7 @@ var nasaEL = document.querySelector("#nasa-photo");
 var navHome = document.querySelector("#home");
 var navFave = document.querySelector("#favorite");
 
-
+// Isabella's changes for card for third page
 
 function showInfo() {
     const infoElement = event.target.querySelector('.info');
@@ -16,6 +16,9 @@ function showInfo() {
     const infoElement = event.target.querySelector('.info');
     infoElement.style.transform = 'translateY(100%)';
   }
+// to hide infor for card third page
+
+
 
 
 // navigation link functions

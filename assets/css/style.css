@@ -13,7 +13,7 @@ body {
     background:      linear-gradient(to left top, rgb(2, 2, 63), rgb(11, 150, 237)) ;
     background-attachment: fixed;
 }
-
+/* i added changes to body including background and background attatchment */
 header {
     padding: 1rem;
 }
@@ -92,7 +92,7 @@ a:hover {
 #description {
     line-height: 1.82;
 }
-
+/* beginning of Isabella's css */
 .stars {
     background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     position: absolute;
@@ -154,3 +154,4 @@ a:hover {
   .card:hover .info {
     transform: translateY(0);
   }
+  /* the end */
