@@ -42,12 +42,32 @@ function goFave() {
 // nasa photo function
 function nasaRequested() {
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
+<<<<<<< HEAD
+   const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
+   const dateInput = document.querySelector("#datepicker");
+   const title = document.querySelector("#title");
+   const copyright = document.querySelector("#copyright");
+   const mediaSection = document.querySelector("#media-section");
+   const information = document.querySelector("#description");
+   const play = document.querySelector("#play");
+
+   window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:playlist:37i9dQZF1DX1qNZsqIInBz'
+    };
+    const callback = (EmbedController) => {
+    };
+    IFrameAPI.createController(element, options, callback);
+  };
+=======
     const apiKey = "yShsdvh8qlORqHHmWnX0W06kEaFtwLZorMqa9L75";
     const dateInput = document.querySelector("#datepicker");
     const title = document.querySelector("#title");
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
+>>>>>>> develop
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
