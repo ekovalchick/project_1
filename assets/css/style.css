@@ -1,5 +1,6 @@
 /*style.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+<<<<<<< HEAD
 
     :root{
      font-family: 'Montserrat', sans-serif;
@@ -53,6 +54,8 @@
     }
 
 
+=======
+>>>>>>> 68512ff4e153702c041729cc14919f0c6cbddff7
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -183,4 +186,7 @@ a:hover {
 #description {
     line-height: 1.82;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 68512ff4e153702c041729cc14919f0c6cbddff7
