@@ -5,8 +5,10 @@ var nasaEL = document.querySelector("#nasa-photo");
 var navHome = document.querySelector("#home");
 var navFave = document.querySelector("#favorite");
 var userName = document.querySelector("#user-name");
+var nameEl = document.querySelectorAll(".name");
 var favoriteBtn = document.querySelector("#favorite-button");
 var favContainerEl = document.querySelector(".fav-container");
+
 
 var users = [];
 
@@ -116,7 +118,7 @@ function footerVisibility() {
         footer.style.display = 'none';
     }
 }
-// Function to save NASA photos to Favorites
+// Function to save NASA photos to Favorites page
 function saveFavorite() {
     var json = JSON.parse(localStorage.getItem("json"));
     if (localStorage.getItem(users)) {
@@ -132,31 +134,7 @@ function saveFavorite() {
     localStorage.setItem("users", JSON.stringify(users));
 }
 
-
-// Event Listener for navigation links
-navHome.addEventListener("click", goHome);
-navFave.addEventListener("click", goFave);
-// Event listener for scroll, resize, and popstate events
-window.addEventListener('scroll', footerVisibility);
-window.addEventListener('resize', footerVisibility);
-window.addEventListener('popstate', footerVisibility);
-// date picker event listener
-const dateInput = document.querySelector("#datepicker");
-dateInput.addEventListener('change', (e) => {
-    e.preventDefault();
-    nasaRequested();
-
-    // page elements are hidden upon fetching Nasa Photo of the Day.
-    introEl.classList.add("hide");
-    navEl.removeAttribute("class");
-    nasaEL.removeAttribute("class");
-})
-favoriteBtn.addEventListener("click", saveFavorite)
-
-
-
-
-
+// Elizabeth's logic for the favorite's page
 function getFields(pullTheArray) {
     var pullTheArray = JSON.parse(localStorage.getItem("users"));
     console.log(pullTheArray[0])
@@ -196,5 +174,35 @@ function getFields(pullTheArray) {
     }
 
 }
+
+
+// Event Listener for navigation links
+navHome.addEventListener("click", goHome);
+navFave.addEventListener("click", goFave);
+// Event listener for scroll, resize, and popstate events
+window.addEventListener('scroll', footerVisibility);
+window.addEventListener('resize', footerVisibility);
+window.addEventListener('popstate', footerVisibility);
+favoriteBtn.addEventListener("click", saveFavorite);
+// name input event listener
+userName.addEventListener('input', () => {
+    var inputValue = userName.value;
+    nameEl.forEach((label) => {
+        label.textContent = inputValue;
+    });
+});
+// date picker from NASA API
+const dateInput = document.querySelector("#datepicker");
+dateInput.addEventListener('change', (e) => {
+    e.preventDefault();
+    nasaRequested();
+
+    // page elements are hidden upon fetching Nasa Photo of the Day.
+    introEl.classList.add("hide");
+    navEl.removeAttribute("class");
+    nasaEL.removeAttribute("class");
+});
+
+
 
 
