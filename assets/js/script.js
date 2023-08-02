@@ -8,6 +8,7 @@ var userName = document.querySelector("#user-name");
 var nameEl = document.querySelectorAll(".name");
 var favoriteBtn = document.querySelector("#favorite-button");
 var favContainerEl = document.querySelector(".fav-container");
+var backBtn = document.querySelector("#back-button")
 
 
 
@@ -29,6 +30,7 @@ function goHome() {
     navEl.classList.add("hide");
     introEl.classList.remove("hide");
 
+
 }
 function goFave() {
     nasaEL.classList.add("hide");
@@ -36,6 +38,7 @@ function goFave() {
     navEl.removeAttribute("class");
     favoriteEl.classList.remove("hide");
     getFields();
+
 }
 // nasa photo function
 function nasaRequested() {
@@ -136,21 +139,18 @@ function saveFavorite() {
 function getFields(pullTheArray) {
     var pullTheArray = JSON.parse(localStorage.getItem("users"));
     console.log(pullTheArray[0])
+    console.log(pullTheArray.length)
+    
     for (var i = 0; i < pullTheArray.length; i++) {
-        //     <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
-        //     <img src="#nasa-photo" alt="Image">
-        //     <section class="info">
-        //         <h2>Card Title</h2>
-        //         <p>Dynamic information goes here...</p>
-        //     </section>
-        //     <button id="remove-button">Remove</button>
-        // </section>
+      
         var section = document.createElement("section")
         section.classList = "card"
         section.setAttribute("onmouseover", "showInfo()")
         section.setAttribute("onmouseout", "hideInfo()")
         var img = document.createElement("img")
+
         img.src = pullTheArray[i].url
+
         img.alt = "image"
 
         var section2 = document.createElement("section")
@@ -167,11 +167,18 @@ function getFields(pullTheArray) {
         section.appendChild(section2)
 
         favContainerEl.appendChild(section)
+          
 
 
     }
+    
 
+}   
+
+function goback (){
+    goHome()  
 }
+
 
 
 // Event Listener for navigation links
@@ -200,6 +207,8 @@ dateInput.addEventListener('change', (e) => {
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
 })
+
+backBtn.addEventListener("click", goback);
 
 
 
