@@ -28,7 +28,7 @@ function goHome() {
     nasaEL.classList.add("hide");
     favoriteEl.classList.add("hide");
     navEl.classList.add("hide");
-    introEl.removeAttribute("class");
+    introEl.classList.remove("hide");
 
 }
 function goFave() {
@@ -36,7 +36,7 @@ function goFave() {
     introEl.classList.add("hide");
     navEl.removeAttribute("class");
     favoriteEl.classList.remove("hide");
-    getFields()
+    getFields();
 }
 // nasa photo function
 function nasaRequested() {
@@ -47,7 +47,6 @@ function nasaRequested() {
     const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
     const information = document.querySelector("#description");
-
     const currentDate = new Date().toISOString().slice(0, 10);
 
 
@@ -118,7 +117,7 @@ function footerVisibility() {
         footer.style.display = 'none';
     }
 }
-// Function to save NASA photos to Favorites page
+// Function to save NASA photos to Favorites
 function saveFavorite() {
     var json = JSON.parse(localStorage.getItem("json"));
     if (localStorage.getItem(users)) {
@@ -183,6 +182,7 @@ navFave.addEventListener("click", goFave);
 window.addEventListener('scroll', footerVisibility);
 window.addEventListener('resize', footerVisibility);
 window.addEventListener('popstate', footerVisibility);
+
 favoriteBtn.addEventListener("click", saveFavorite);
 // name input event listener
 userName.addEventListener('input', () => {
@@ -196,12 +196,11 @@ const dateInput = document.querySelector("#datepicker");
 dateInput.addEventListener('change', (e) => {
     e.preventDefault();
     nasaRequested();
-
     // page elements are hidden upon fetching Nasa Photo of the Day.
     introEl.classList.add("hide");
     navEl.removeAttribute("class");
     nasaEL.removeAttribute("class");
-});
+})
 
 
 
