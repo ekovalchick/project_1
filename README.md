@@ -15,21 +15,15 @@
 - [License](#license)
 
 ## Installation
-API from NASA
-Spotify API
+N/A
 
 ## Usage
 
-N/A
+Click this link to explore the cosmos: https://ekovalchick.github.io/project_1/
 
 ## Credits
-
-Isabella Adrien
-Elizabeth Kovach
-Rujaine Mena
-Giselle Reyes
-javascipt for NASA API attributed to Dev.to Mahesh Deshmukh
-
+APIs used from NASA and Spotify (javascipt for NASA API attributed to Dev.to Mahesh Deshmukh)
+TailwindCSS 
 
 ## License
 
@@ -38,14 +32,23 @@ javascipt for NASA API attributed to Dev.to Mahesh Deshmukh
 
 ## Features
 
-Webpage
+Welcome Page:
+* Users enter their name and pick a date of the day they would like to see a cosmic photo from.
 
-## How to Contribute
+Cosmic Photo:
+* This page will generate a NASA photo from the date the User selected previously.
+* The photo will have a title and description.
+* Users will be able to share their Cosmic Photo to Facebook with a click of a button.
+* Users can save their Cosmic Photo by click the 'Favorite' button.
+* Users can return to the main page to select a different date by using the 'Go Back' button or the 'Home' button in the navigation bar.
+* A music player will be available to the User to play a galactic-themed song that matches their photo.
 
-Isabella Adrien
-Elizabeth Kovalchick
-Rujaine Mena
-Giselle Reyes
+Favorites Page:
+* Photos previously added to favorites using the 'Favorites' button will be displayed here.
+
+## Contributors
+
+Isabella Adrien, Elizabeth Kovalchick, Rujaine Mena, and Giselle Reyes.
 
 ## Tests
 
