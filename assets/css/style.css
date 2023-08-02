@@ -41,6 +41,11 @@ footer {
     text-align: center;
 }
 
+#share {
+    margin:auto;
+    text-align: center;
+}
+
 a:hover {
     color: lightskyblue;
 }
@@ -83,6 +88,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
     /* Adjust this height as needed */
 }
 
@@ -113,6 +119,11 @@ a:hover {
     color: white;
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    font-size: 10px;
+}
+
+.card .info h2 {
+    font-size:22px;
 }
 
 .card:hover {
