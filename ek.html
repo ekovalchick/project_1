@@ -31,7 +31,7 @@
 
         <form id="user-info">
             <label for="username">Your Name:
-                <input id="user-name" type="text">
+                <input id="user-name" type="text" min="" max="">
             </label>
             <!-- calendar from NASA API --->
             <label for="datepiceker">Pick a Date:
@@ -44,12 +44,8 @@
     <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
     <main id="nasa-photo" class="hide">
         <header>
-
-            <h1><label for="" class="name">Nasa</label>'s Cosmic Picture of the Day</h1>
-            <!-- <hr  style="color: white; width: 60vh;"> -->
-
-
-
+            <h1><label for="" id="user-name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <hr style="color: white; width: 60vw;">
         </header>
 
         <section class="title-section">
@@ -66,7 +62,7 @@
                 src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2F&layout=button_count&size=small&mobile_iframe=true&appId"
                 width="130" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowTransparency="true"></iframe>
-            <!-- Giselle's code for twitter share btn -->
+            <!-- giselle's code for twitter share btn -->
             <iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=medium"
                 style="width:130px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
             <button id="favorite-button">Favorite</button>
@@ -91,20 +87,20 @@
 
     <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
     <section id="favorite-section" class="hide">
-        <h1><label for="" class="name">Nasa</label>'s Favorite Cosmos</h1>
+        <h1><label for="" id="name">Nasa</label>'s Favorite Cosmos</h1>
         <!-- Isabella's code for favorites saved -->
-        <section class="fav-container">
-            <!-- <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
+        <section class="fave-container">
+            <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
                 <img src="#nasa-photo" alt="Image">
                 <section class="info">
                     <h2>Card Title</h2>
                     <p>Dynamic information goes here...</p>
-
-                    <button id="remove-button">Remove</button>
-                </section> -->
-
+                </section>
+                <button id="remove-button">Remove</button>
+            </section>
         </section>
     </section>
+   
 
     <!-- All rights documentation will be contained here -->
     <footer id="rights-container">
@@ -114,7 +110,7 @@
         </h6>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/ek.js"></script>
 
 </body>
 
