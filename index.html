@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Cosmic Jam</title>
+</head>
+
+
+<!---index.html-->
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav id="navigation" class="hide">
+            <ul>
+                <li id="home"><a href="#intro-section">Home</a></li>
+                <li id="favorite"><a href="#favorite-section">Favorites</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- page 1: the welcome page to instruct users -->
+    <section id="intro-section" class="stars">
+        <h1 style="font-size: xx-large;">Cosmic Jamz</h1>
+        <p>Enter a date below to learn how cosmos aligned!</p>
+
+
+
+        <form id="user-info">
+            <label for="username">Your Name:
+                <input id="user-name" type="text">
+            </label>
+            <!-- calendar from NASA API --->
+            <label for="datepiceker">Pick a Date:
+                <input id="datepicker" type="date" min="" max="">
+            </label>
+        </form>
+
+    </section>
+
+    <!-- page 2 will display the results of the user's input, NASA's picture of the day and Spotify song player -->
+    <main id="nasa-photo" class="hide">
+        <header>
+            <h1 style="font-size: xx-large;"><label for="" class="name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <!-- <hr  style="color: white; width: 60vh;"> -->
+        </header>
+
+        <section class="title-section">
+            <h2 style="font-size: large;" id="title"></h2>
+            <p id="date"></p>
+            <small style="display: block;" id="copyright"></small>
+        </section>
+
+        <section id="media-section"></section>
+
+        <section>
+            <!-- giselle's code for FB share btn -->
+            <section id="share">
+                <center>
+                <iframe
+                    src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2F&layout=button_count&size=small&mobile_iframe=true&appId"
+                    width="130" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true"></iframe>
+                </center>
+            </section>
+
+            <button class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded"
+                id="favorite-button">Favorite</button>
+
+            <button class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded"
+                id="back-button">Go Back</button>
+
+        </section>
+
+        <div class="description-div">
+            <p id="description"></p>
+        </div>
+
+        <div>
+            <h2 style="font-size: large;">Click Play for a Cosmic Experience!</h2>
+        </div>
+
+        <!-- Spotify API -->
+        <section id="music-section">
+            <iframe style="border-radius:10px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1qNZsqIInBz?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0" allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
+    <section id="favorite-section" class="hide">
+
+        <h1 style="font-size: xx-large;"><label for="" class="name">Nasa</label>'s Favorite Cosmos</h1>
+
+        <!-- Isabella's code for favorites saved -->
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg card">
+            <div class="relative">
+                <a
+                    class="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300">
+                    <h1 class=tracking-wider>Title</h1>
+                    <p class="mx-auto description">Description</p>
+                </a>
+                <a href="#" class="relative">
+                    <div class="h-50 flex flex-wrap content-center">
+                        <img src="https://i.pinimg.com/originals/02/74/78/0274781611ab49e0c3f6a99035ab9086.jpg"
+                            class="mx-auto  " alt="">
+                    </div>
+                </a>
+                <div class="px-6 pt-4 pb-2">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- All rights documentation will be contained here -->
+    <footer id="rights-container">
+
+        <h6 style="font-size: small;">Special thanks to: NASA API & Spotify API. Brought to you by the
+            Space Cadets: Elizabeth Kovalchick, Giselle Reyes, Isabella Adrien , Rujaine Mena. </h6>
+
+    </footer>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
