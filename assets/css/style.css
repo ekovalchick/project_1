@@ -7,15 +7,70 @@
 }
 
 body {
-    margin: 5;
-    background-color:var(--primary-color); 
-     color: rgb(250, 250, 250);
-    background:      linear-gradient(to left top, rgb(2, 2, 63), rgb(11, 150, 237)) ;
-    background-attachment: fixed;
+
+    margin: 0;
+    background-color: var(--primary-color);
+    color: white;
 }
-/* i added changes to body including background and background attatchment */
+
 header {
     padding: 1rem;
+}
+
+main {
+    margin: auto;
+    text-align: center;
+}
+
+.title-section {
+    padding: 1rem;
+}
+
+#datepicker {
+    box-sizing: border-box;
+    width: 9rem;
+    padding: 00.2rem;
+    border-radius: 0.5rem;
+}
+
+.image-div {
+    width: 80%;
+    margin: auto;
+}
+
+#image_of_the_day {
+    width: 100%;
+}
+
+.video-div {
+    width: 80%;
+    margin: auto;
+}
+
+#videoLink {
+    width: 100%;
+    height: 70vh
+}
+
+.description-div {
+    width: 80%;
+    margin: 0.1rem auto 1rem;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 00.5rem;
+}
+
+#description {
+    line-height: 1.82;
+}
+
+#navigation {
+    width: 80%;
+    margin: 0.1rem auto 1rem;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 00.5rem;
+
 }
 
 nav ul {
@@ -41,8 +96,16 @@ footer {
     text-align: center;
 }
 
+#intro-section {
+    padding: 100px 20px;
+}
+
+#rights-container {
+    padding: 5px;
+}
+
 #share {
-    margin:auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -55,15 +118,10 @@ a:hover {
     padding: 1.5rem;
 }
 
-
-
 /* class to hide pages and navigation bar */
 .hide {
     display: none;
 }
-
-
-
 
 /* Isabella's CSS code */
 .stars {
@@ -88,7 +146,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+
     /* Adjust this height as needed */
 }
 
@@ -123,7 +181,7 @@ a:hover {
 }
 
 .card .info h2 {
-    font-size:22px;
+    font-size: 22px;
 }
 
 .card:hover {
