@@ -31,7 +31,7 @@
 
         <form id="user-info">
             <label for="username">Your Name:
-                <input id="user-name" type="text" min="" max="">
+                <input id="user-name" type="text">
             </label>
             <!-- calendar from NASA API --->
             <label for="datepiceker">Pick a Date:
@@ -45,10 +45,10 @@
     <main id="nasa-photo" class="hide">
         <header>
 
-            <h1><label for="" id="name">Nasa</label>'s Cosmic Picture of the Day</h1>
+            <h1><label for="" class="name">Nasa</label>'s Cosmic Picture of the Day</h1>
             <!-- <hr  style="color: white; width: 60vh;"> -->
 
-            
+
 
         </header>
 
@@ -62,16 +62,15 @@
 
         <section>
             <!-- giselle's code for FB share btn -->
+            <section id="share">
             <iframe
                 src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2F&layout=button_count&size=small&mobile_iframe=true&appId"
                 width="130" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
                 allowTransparency="true"></iframe>
-            <!-- Giselle's code for twitter share btn -->
-            <iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=medium"
-                style="width:130px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
-            <button id="favorite-button">Favorite</button>
-            <button id="share-button">Share</button>
-            <button id="back-button">Go Back</button>
+            </section>
+            <button class= "bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded" id="favorite-button">Favorite</button>
+            <button id="share-button"></button>
+            <button class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded" id="back-button">Go Back</button>
         </section>
 
         <div class="description-div">
@@ -91,18 +90,17 @@
 
     <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
     <section id="favorite-section" class="hide">
-        <h1><label for="" id="name">Nasa</label>'s Favorite Cosmos</h1>
-<!-- Isabella's code for favorites saved -->
+        <h1><label for="" class="name">Nasa</label>'s Favorite Cosmos</h1>
+        <!-- Isabella's code for favorites saved -->
         <section class="fav-container">
-            <button id="remove-button">Remove</button>
             <!-- <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
                 <img src="#nasa-photo" alt="Image">
                 <section class="info">
                     <h2>Card Title</h2>
-                    <p>Dynamic information goes here...</p>-->
+                    <p>Dynamic information goes here...</p>
 
-                    
-                <!-- </section>--> -->
+                    <button id="remove-button">Remove</button>
+                </section> -->
 
         </section>
     </section>
