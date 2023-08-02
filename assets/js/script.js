@@ -7,19 +7,7 @@ var navFave = document.querySelector("#favorite");
 var userName = document.querySelector("#user-name");
 var favoriteBtn = document.querySelector("#favorite-button");
 
-// Isabella's changes for card for third page
 
-// function showInfo() {
-//     const infoElement = event.target.querySelector('.info');
-//     infoElement.style.transform = 'translateY(0)';
-//   }
-//   var users = [];
-
-//   function hideInfo() {
-//     const infoElement = event.target.querySelector('.info');
-//     infoElement.style.transform = 'translateY(100%)';
-//   }
-// to hide infor for card third page
 // Spotify API
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
     const element = document.getElementById('embed-iframe');

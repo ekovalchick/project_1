@@ -16,7 +16,7 @@
 <body>
     <!-- navigation bar -->
     <header>
-        <nav id="navigation" class="hide" >
+        <nav id="navigation" class="hide">
             <ul>
                 <li id="home"><a href="#intro-section">Home</a></li>
                 <li id="favorite"><a href="#favorite-section">Favorites</a></li>
@@ -28,8 +28,8 @@
     <section id="intro-section" class="stars">
         <h1>Cosmic Jamz</h1>
         <p>Enter a date below to learn how cosmos aligned!</p>
-       
-    
+
+
 
         <form id="user-info">
             <label for="username">Your Name:
@@ -67,8 +67,12 @@
             <!-- giselle's code for twitter share btn -->
             <iframe src="https://platform.twitter.com/widgets/tweet_button.html?size=medium"
                 style="width:130px; height:20px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
-            <button id="favorite-button">Favorite</button>
-            <button id="back-button">Go Back</button>
+
+
+            <button
+                class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded">Favorite</button>
+
+            <button class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded">Go Back</button>
         </section>
 
         <div class="description-div">
@@ -88,53 +92,54 @@
     <!-- page 3 will display the Users' local storage of favorite cosmic photos -->
     <section id="favorite-section" class="hide">
         <h1><label for="" id="name">Nasa</label>'s Favorite Cosmos</h1>
-<!-- Isabella's code for favorites saved -->
-<div class="container" class="card"> 
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-      <p class="text-gray-700 text-base" class="txt" class="hide">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-      </p>
-    </div>
-    <div class="px-6 pt-4 pb-2">
-      <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#favorite</span> -->
-      <button class="rounded-none ...">remove</button>
-      <!-- <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#share</span> -->
-      <button class="rounded-none ..." class="btn">Share</button>
-    </div>
-  </div>
+        <!-- Isabella's code for favorites saved -->
 
-</div>
-
-
-        <!-- <section class="fave-container">
-            <section class="card" onmouseover="showInfo()" onmouseout="hideInfo()">
-                <img src="#nasa-photo" alt="Image">
-                <section class="info">
-                    <h2>Card Title</h2>
-                    <p>Dynamic information goes here...</p>
-                </section>
-                <button id="remove-button">Remove</button>
-            </section>
-        </section>
-    </section> -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg card">
+            <div class="relative">
+                <a
+                    class="absolute inset-0 z-10 bg-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-50 duration-300">
+                    <h1 class=tracking-wider>Title</h1>
+                    <p class="mx-auto description">Description</p>
+                </a>
+                <a href="#" class="relative">
+                    <div class="h-50 flex flex-wrap content-center">
+                        <img src="https://i.pinimg.com/originals/02/74/78/0274781611ab49e0c3f6a99035ab9086.jpg"
+                            class="mx-auto  " alt="">
+                    </div>
+                </a>
+                <div class="px-6 pt-4 pb-2">
 
 
 
 
+                </div>
 
 
-    <!-- All rights documentation will be contained here -->
-    <footer id="rights-container">
-        <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus facilis quaerat perspiciatis cum dolo
-            nesciunt accusantium sapiente rem fugiat nobis ea. At quod vitae sunt molestias omnis? Id, magnam?Aperiam.
+            </div>
+            <button
+                class=" btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full flex content-cente flex-wrap">
+                Remove
+            </button>
 
-        </h6>
-    </footer>
 
-    <script src="./assets/js/script.js"></script>
+
+        </div>
+
+
+    
+    
+
+        <!-- All rights documentation will be contained here -->
+        <footer id="rights-container">
+            <h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus facilis quaerat perspiciatis cum
+                dolo
+                nesciunt accusantium sapiente rem fugiat nobis ea. At quod vitae sunt molestias omnis? Id,
+                magnam?Aperiam.
+
+            </h6>
+        </footer>
+
+        <script src="./assets/js/script.js"></script>
 
 </body>
 
