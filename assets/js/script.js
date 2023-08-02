@@ -10,7 +10,7 @@ var favoriteBtn = document.querySelector("#favorite-button");
 var favContainerEl = document.querySelector(".fav-container");
 var backBtn = document.querySelector("#back-button")
 
-
+var users = [];
 
 // Spotify API
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
