@@ -168,8 +168,7 @@ function getFields(pullTheArray) {
 
         favContainerEl.appendChild(section)
           
-
-
+            
     }
     
 
